@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VeiwModel
+{
+   public class PersonVeiwModel
+    {
+        public PersonVeiwModel()
+        {
+            
+        }
+        public Model.DomainModel.POCO.Base.PersonCrud Ref_PersonCrud { get; set; }
+        public void Save(string name, string surname, int username, int password)
+        {
+            Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonCrud();
+
+            Ref_PersonCrud.Insert(name, surname, username, password);
+        }
+        public dynamic FillGrid()
+        {
+            Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonCrud();
+            return Ref_PersonCrud.Select();
+        }
+        public void Delete(string name, string surname, int username, int password,int id)
+        {
+            Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonCrud();
+            Ref_PersonCrud.Remove( name, surname, username,  password,id);
+           
+        }
+        public void Edit(string name, string surname, int username, int password, int id)
+        {
+            Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonCrud();
+            Ref_PersonCrud.edit(name, surname, username, password, id);
+
+        }
+
+       
+    }
+}
