@@ -30,7 +30,7 @@ namespace Veiw
         {
             Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
              ;
-            Ref_PersonVeiwModel.Delete(Convert.ToString(dataGridView1[1, dataGridView1.CurrentRow.Index].Value),Convert.ToString(dataGridView1[2,dataGridView1.CurrentRow.Index].Value),Convert.ToInt32(dataGridView1[3,dataGridView1.CurrentRow.Index].Value),Convert.ToInt32(dataGridView1[4,dataGridView1.CurrentRow.Index].Value),Convert.ToInt32(dataGridView1[0,dataGridView1.CurrentRow.Index].Value));
+            Ref_PersonVeiwModel.Delete(Convert.ToInt32(dataGridView1[0,dataGridView1.CurrentRow.Index].Value));
             
         }
 

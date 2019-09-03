@@ -10,7 +10,7 @@ namespace Model.DomainModel.POCO.Crud
     {
         void Insert(string name, string surname,int username, int password);
         List<DomainModel.DTO.EF.Person> Select();
-        void Remove(string name, string surname, int username, int password,int id);
+        void Remove(int id);
         void edit(string name, string surname, int username, int password, int id);
     }
 }

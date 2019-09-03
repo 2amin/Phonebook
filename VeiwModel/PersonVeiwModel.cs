@@ -24,10 +24,10 @@ namespace VeiwModel
             Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonCrud();
             return Ref_PersonCrud.Select();
         }
-        public void Delete(string name, string surname, int username, int password,int id)
+        public void Delete(int id)
         {
             Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonCrud();
-            Ref_PersonCrud.Remove( name, surname, username,  password,id);
+            Ref_PersonCrud.Remove(id);
            
         }
         public void Edit(string name, string surname, int username, int password, int id)

@@ -80,21 +80,18 @@ namespace Model.DomainModel.POCO.Base
             }
         }
         #endregion
-        public void Remove(string name, string surname, int username, int password,int id)
+        public void Remove(int id)
         {
             using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
             {
                 try
                 {
                     var Ref_Person = new Person();
-
-                    Ref_Person.FirstName = name;
-                    Ref_Person.Surname = surname;
-                    Ref_Person.UserName = username;
-                    Ref_Person.Password = password;
-                    
-                    Ref_Person = Context.Person.Find(Ref_Person.FirstName, Ref_Person.Surname, Ref_Person.UserName, Ref_Person.Password, Ref_Person.Id);
+                    Ref_Person = Context.Person.Find(id);
                     Context.Person.Remove(Ref_Person);
+                    
+
+                    
                     Context.SaveChanges();
                 }
                 catch (Exception)
@@ -140,7 +137,11 @@ namespace Model.DomainModel.POCO.Base
                 }
                 finally
                 {
+                    if (Context != null)
+                    {
+                        Context.Dispose();
 
+                    }
                 }
             }
         }
