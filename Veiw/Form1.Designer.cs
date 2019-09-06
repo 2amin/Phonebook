@@ -41,6 +41,10 @@
             this.btndelete = new System.Windows.Forms.Button();
             this.btnreferesh = new System.Windows.Forms.Button();
             this.btnedit = new System.Windows.Forms.Button();
+            this.lblerorname = new System.Windows.Forms.Label();
+            this.lblerorusername = new System.Windows.Forms.Label();
+            this.lblerorsurname = new System.Windows.Forms.Label();
+            this.lblerorpassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +63,7 @@
             this.lblsurname.Location = new System.Drawing.Point(30, 42);
             this.lblsurname.Name = "lblsurname";
             this.lblsurname.Size = new System.Drawing.Size(65, 17);
-            this.lblsurname.TabIndex = 1;
+            this.lblsurname.TabIndex = 0;
             this.lblsurname.Text = "Surname";
             // 
             // label3
@@ -68,7 +72,7 @@
             this.label3.Location = new System.Drawing.Point(30, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 17);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Username";
             // 
             // label4
@@ -77,7 +81,7 @@
             this.label4.Location = new System.Drawing.Point(34, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 17);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Password";
             // 
             // txtname
@@ -85,35 +89,40 @@
             this.txtname.Location = new System.Drawing.Point(138, 5);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(132, 22);
-            this.txtname.TabIndex = 4;
+            this.txtname.TabIndex = 1;
+            this.txtname.Validating += new System.ComponentModel.CancelEventHandler(this.txtname_Validating);
             // 
             // txtsurname
             // 
             this.txtsurname.Location = new System.Drawing.Point(138, 42);
             this.txtsurname.Name = "txtsurname";
             this.txtsurname.Size = new System.Drawing.Size(132, 22);
-            this.txtsurname.TabIndex = 5;
+            this.txtsurname.TabIndex = 2;
+            this.txtsurname.Validating += new System.ComponentModel.CancelEventHandler(this.txtsurname_Validating);
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(138, 116);
+            this.txtpassword.Location = new System.Drawing.Point(138, 111);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(132, 22);
-            this.txtpassword.TabIndex = 6;
+            this.txtpassword.TabIndex = 4;
+            this.txtpassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtpassword_Validating);
             // 
             // txtusername
             // 
             this.txtusername.Location = new System.Drawing.Point(138, 77);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(132, 22);
-            this.txtusername.TabIndex = 8;
+            this.txtusername.TabIndex = 3;
+            this.txtusername.Validating += new System.ComponentModel.CancelEventHandler(this.txtusername_Validating);
             // 
             // btnsave
             // 
+            this.btnsave.Enabled = false;
             this.btnsave.Location = new System.Drawing.Point(12, 141);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(175, 61);
-            this.btnsave.TabIndex = 9;
+            this.btnsave.TabIndex = 5;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
             this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
@@ -157,11 +166,47 @@
             this.btnedit.UseVisualStyleBackColor = true;
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
+            // lblerorname
+            // 
+            this.lblerorname.AutoSize = true;
+            this.lblerorname.Location = new System.Drawing.Point(312, 8);
+            this.lblerorname.Name = "lblerorname";
+            this.lblerorname.Size = new System.Drawing.Size(0, 17);
+            this.lblerorname.TabIndex = 16;
+            // 
+            // lblerorusername
+            // 
+            this.lblerorusername.AutoSize = true;
+            this.lblerorusername.Location = new System.Drawing.Point(312, 80);
+            this.lblerorusername.Name = "lblerorusername";
+            this.lblerorusername.Size = new System.Drawing.Size(0, 17);
+            this.lblerorusername.TabIndex = 17;
+            // 
+            // lblerorsurname
+            // 
+            this.lblerorsurname.AutoSize = true;
+            this.lblerorsurname.Location = new System.Drawing.Point(312, 42);
+            this.lblerorsurname.Name = "lblerorsurname";
+            this.lblerorsurname.Size = new System.Drawing.Size(0, 17);
+            this.lblerorsurname.TabIndex = 19;
+            // 
+            // lblerorpassword
+            // 
+            this.lblerorpassword.AutoSize = true;
+            this.lblerorpassword.Location = new System.Drawing.Point(312, 116);
+            this.lblerorpassword.Name = "lblerorpassword";
+            this.lblerorpassword.Size = new System.Drawing.Size(0, 17);
+            this.lblerorpassword.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblerorpassword);
+            this.Controls.Add(this.lblerorsurname);
+            this.Controls.Add(this.lblerorusername);
+            this.Controls.Add(this.lblerorname);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btnreferesh);
             this.Controls.Add(this.btndelete);
@@ -199,6 +244,10 @@
         private System.Windows.Forms.Button btnreferesh;
         private System.Windows.Forms.Button btnedit;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblerorname;
+        private System.Windows.Forms.Label lblerorusername;
+        private System.Windows.Forms.Label lblerorsurname;
+        private System.Windows.Forms.Label lblerorpassword;
     }
 }
 
