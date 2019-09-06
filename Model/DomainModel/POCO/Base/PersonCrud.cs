@@ -22,7 +22,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-Insert-]
         public void Insert(string name, string surname, int username, int password)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities4())
             {
 
                 try
@@ -57,7 +57,7 @@ namespace Model.DomainModel.POCO.Base
 
         public List<Person> Select()
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities4())
             {
                 try
                 {
@@ -82,7 +82,7 @@ namespace Model.DomainModel.POCO.Base
         #endregion
         public void Remove(int id)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities4())
             {
                 try
                 {
@@ -112,7 +112,7 @@ namespace Model.DomainModel.POCO.Base
 
         public void edit(string name, string surname, int username, int password, int id)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities4())
             {
                 try
                 {

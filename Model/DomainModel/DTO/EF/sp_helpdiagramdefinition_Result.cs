@@ -10,14 +10,10 @@
 namespace Model.DomainModel.DTO.EF
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Person
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string Surname { get; set; }
-        public Nullable<int> UserName { get; set; }
-        public Nullable<int> Password { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

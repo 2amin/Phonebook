@@ -68,6 +68,9 @@
     <Compile Include="DomainModel\DTO\EF\Person.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DomainModel\DTO\EF\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DomainModel\POCO\Base\PersonCrud.cs" />
     <Compile Include="DomainModel\POCO\Crud\Crud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -13,10 +13,10 @@ namespace Model.DomainModel.DTO.EF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OnlineShoppingEntities : DbContext
+    public partial class OnlineShoppingEntities4 : DbContext
     {
-        public OnlineShoppingEntities()
-            : base("name=OnlineShoppingEntities")
+        public OnlineShoppingEntities4()
+            : base("name=OnlineShoppingEntities4")
         {
         }
     
@@ -26,5 +26,6 @@ namespace Model.DomainModel.DTO.EF
         }
     
         public virtual DbSet<Person> Person { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

@@ -12,12 +12,14 @@ namespace Model.DomainModel.DTO.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class Person
+    public partial class Product
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string Surname { get; set; }
-        public Nullable<int> UserName { get; set; }
-        public Nullable<int> Password { get; set; }
+        public int Unitprice { get; set; }
+        public int Number { get; set; }
+        public int Discount { get; set; }
+        public string Name { get; set; }
+        public int All { get; set; }
+        public int id { get; set; }
+        public string Ref_Person { get; set; }
     }
 }
