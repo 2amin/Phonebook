@@ -50,7 +50,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(35, 725);
+            this.toolStrip1.Size = new System.Drawing.Size(40, 725);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -63,7 +63,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(32, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(37, 24);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // signInToolStripMenuItem
@@ -81,6 +81,7 @@
             this.sellerToolStripMenuItem.Name = "sellerToolStripMenuItem";
             this.sellerToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.sellerToolStripMenuItem.Text = "Seller";
+            this.sellerToolStripMenuItem.Click += new System.EventHandler(this.sellerToolStripMenuItem_Click);
             // 
             // buyerToolStripMenuItem
             // 

@@ -24,9 +24,14 @@ namespace Veiw
 
         private void signUpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 Ref_frm1 = new Form1();
+            BuyerRegister Ref_frm1 = new BuyerRegister();
             Ref_frm1.MdiParent = this;
             Ref_frm1.Show();
+        }
+
+        private void sellerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

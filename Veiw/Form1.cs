@@ -14,7 +14,9 @@ namespace Veiw
     {
         public Form1()
         {
+       
             InitializeComponent();
+            
         }
         public VeiwModel.PersonVeiwModel Ref_PersonVeiwModel { get; set; }
        
@@ -242,7 +244,13 @@ namespace Veiw
                 }
 
             }
-        } 
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
+            dataGridView1.DataSource = Ref_PersonVeiwModel.FillGrid();
+        }
+    } 
         #endregion
     }
 

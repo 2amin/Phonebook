@@ -8,10 +8,10 @@ namespace Model.DomainModel.POCO.Crud
 {
     interface Crud
     {
-        void Insert(string name, string surname,int username, int password);
+        void Insert(string name, string surname, int username, int password);
         List<DomainModel.DTO.EF.Person> Select();
         void Remove(int id);
         void edit(string name, string surname, int username, int password, int id);
         
-    }
+    }   
 }

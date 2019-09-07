@@ -119,7 +119,7 @@
             // btnsave
             // 
             this.btnsave.Enabled = false;
-            this.btnsave.Location = new System.Drawing.Point(12, 141);
+            this.btnsave.Location = new System.Drawing.Point(12, 144);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(175, 61);
             this.btnsave.TabIndex = 5;
@@ -222,6 +222,7 @@
             this.Controls.Add(this.lbl_Name);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,11 +235,6 @@
         private System.Windows.Forms.Label lblsurname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtname;
-        private System.Windows.Forms.TextBox txtsurname;
-        private System.Windows.Forms.TextBox txtpassword;
-        private System.Windows.Forms.TextBox txtusername;
-        private System.Windows.Forms.Button btnsave;
        
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnreferesh;
@@ -248,6 +244,11 @@
         private System.Windows.Forms.Label lblerorusername;
         private System.Windows.Forms.Label lblerorsurname;
         private System.Windows.Forms.Label lblerorpassword;
+        public System.Windows.Forms.TextBox txtname;
+        public System.Windows.Forms.TextBox txtsurname;
+        public System.Windows.Forms.TextBox txtpassword;
+        public System.Windows.Forms.TextBox txtusername;
+        public System.Windows.Forms.Button btnsave;
     }
 }
 

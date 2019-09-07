@@ -146,6 +146,6 @@ namespace Model.DomainModel.POCO.Base
             }
         }
 
-        
+       
     }
 }
