@@ -38,6 +38,7 @@
             this.lblid = new System.Windows.Forms.Label();
             this.txtsurname = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
+            this.btnreferesh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtusername
@@ -123,12 +124,23 @@
             this.txtname.Size = new System.Drawing.Size(132, 22);
             this.txtname.TabIndex = 13;
             // 
+            // btnreferesh
+            // 
+            this.btnreferesh.Location = new System.Drawing.Point(70, 143);
+            this.btnreferesh.Name = "btnreferesh";
+            this.btnreferesh.Size = new System.Drawing.Size(82, 89);
+            this.btnreferesh.TabIndex = 19;
+            this.btnreferesh.Text = "Referesh";
+            this.btnreferesh.UseVisualStyleBackColor = true;
+            this.btnreferesh.Click += new System.EventHandler(this.btnreferesh_Click);
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 233);
             this.ControlBox = false;
+            this.Controls.Add(this.btnreferesh);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.txtusername);
@@ -159,5 +171,6 @@
         public System.Windows.Forms.Label lblid;
         public System.Windows.Forms.TextBox txtsurname;
         public System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.Button btnreferesh;
     }
 }

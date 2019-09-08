@@ -36,10 +36,10 @@ namespace Veiw
                         i++;
                         Ref_User = new User();
                         Ref_Edit = new Edit();
-                        Ref_User.toolStripLabel1.Text = "Welcome" 
-                            + " " + Convert.ToString(Ref_frm1.dataGridView1[1, j].Value) + " " +
-                            Convert.ToString(Ref_frm1.dataGridView1[2, j].Value);
-                      
+                        Ref_User.toolStripLabel1.Text = "Welcome";
+                        Ref_User.toolStripLabel2.Text = Convert.ToString(Ref_frm1.dataGridView1[0, j].Value);   
+
+
                         this.Close();
                         Ref_User.Show();
                         txtpassword.Text = txtusername.Text = null;
