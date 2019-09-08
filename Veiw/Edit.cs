@@ -12,14 +12,20 @@ namespace Veiw
 {
     public partial class Edit : Form
     {
+       
         public Edit()
         {
+            
             InitializeComponent();
+           
         }
+        
         public VeiwModel.PersonVeiwModel Ref_PersonVeiwModel { get; set; }
-       
+        
+        
         private void btnedit_Click(object sender, EventArgs e)
         {
+            
             
             Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
             Ref_PersonVeiwModel.Edit(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text),Convert.ToInt32(lblid.Text));

@@ -80,6 +80,18 @@
     <Compile Include="BuyerRegister.Designer.cs">
       <DependentUpon>BuyerRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="SellerSignin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerSignin.Designer.cs">
+      <DependentUpon>SellerSignin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Edit.resx">
       <DependentUpon>Edit.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +112,12 @@
     </Compile>
     <EmbeddedResource Include="BuyerRegister.resx">
       <DependentUpon>BuyerRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerSignin.resx">
+      <DependentUpon>SellerSignin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

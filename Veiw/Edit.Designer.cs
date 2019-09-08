@@ -30,14 +30,14 @@
         {
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
-            this.txtsurname = new System.Windows.Forms.TextBox();
-            this.txtname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblsurname = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.btnedit = new System.Windows.Forms.Button();
             this.lblid = new System.Windows.Forms.Label();
+            this.txtsurname = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtusername
@@ -53,20 +53,6 @@
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(132, 22);
             this.txtpassword.TabIndex = 15;
-            // 
-            // txtsurname
-            // 
-            this.txtsurname.Location = new System.Drawing.Point(138, 41);
-            this.txtsurname.Name = "txtsurname";
-            this.txtsurname.Size = new System.Drawing.Size(132, 22);
-            this.txtsurname.TabIndex = 14;
-            // 
-            // txtname
-            // 
-            this.txtname.Location = new System.Drawing.Point(138, 4);
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(132, 22);
-            this.txtname.TabIndex = 13;
             // 
             // label4
             // 
@@ -123,6 +109,20 @@
             this.lblid.TabIndex = 18;
             this.lblid.Text = "ID";
             // 
+            // txtsurname
+            // 
+            this.txtsurname.Location = new System.Drawing.Point(138, 41);
+            this.txtsurname.Name = "txtsurname";
+            this.txtsurname.Size = new System.Drawing.Size(132, 22);
+            this.txtsurname.TabIndex = 14;
+            // 
+            // txtname
+            // 
+            this.txtname.Location = new System.Drawing.Point(138, 4);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(132, 22);
+            this.txtname.TabIndex = 13;
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -156,8 +156,8 @@
         private System.Windows.Forms.Button btnedit;
         public System.Windows.Forms.TextBox txtusername;
         public System.Windows.Forms.TextBox txtpassword;
+        public System.Windows.Forms.Label lblid;
         public System.Windows.Forms.TextBox txtsurname;
         public System.Windows.Forms.TextBox txtname;
-        public System.Windows.Forms.Label lblid;
     }
 }

@@ -26,12 +26,15 @@ namespace Veiw
         {
             BuyerRegister Ref_frm1 = new BuyerRegister();
             Ref_frm1.MdiParent = this;
+            
             Ref_frm1.Show();
         }
 
         private void sellerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            SellerSignin Ref_Sellersignin = new SellerSignin();
+            Ref_Sellersignin.MdiParent = this;
+            Ref_Sellersignin.Show();
         }
     }
 }
