@@ -41,6 +41,8 @@
             this.lblsurname = new System.Windows.Forms.Label();
             this.lblusername = new System.Windows.Forms.Label();
             this.lblpassword = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtemail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -114,10 +116,10 @@
             // btnclick
             // 
             this.btnclick.Enabled = false;
-            this.btnclick.Location = new System.Drawing.Point(41, 141);
+            this.btnclick.Location = new System.Drawing.Point(41, 178);
             this.btnclick.Name = "btnclick";
             this.btnclick.Size = new System.Drawing.Size(134, 62);
-            this.btnclick.TabIndex = 5;
+            this.btnclick.TabIndex = 6;
             this.btnclick.Text = "Click";
             this.btnclick.UseVisualStyleBackColor = true;
             this.btnclick.Click += new System.EventHandler(this.btnclick_Click);
@@ -154,11 +156,29 @@
             this.lblpassword.Size = new System.Drawing.Size(0, 17);
             this.lblpassword.TabIndex = 9;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 145);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Email";
+            // 
+            // txtemail
+            // 
+            this.txtemail.Location = new System.Drawing.Point(123, 142);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(158, 22);
+            this.txtemail.TabIndex = 5;
+            // 
             // BuyerRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 252);
+            this.Controls.Add(this.txtemail);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblpassword);
             this.Controls.Add(this.lblusername);
             this.Controls.Add(this.lblsurname);
@@ -194,5 +214,7 @@
         private System.Windows.Forms.Label lblsurname;
         private System.Windows.Forms.Label lblusername;
         private System.Windows.Forms.Label lblpassword;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtemail;
     }
 }

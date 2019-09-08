@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace Veiw
 {
@@ -18,9 +19,11 @@ namespace Veiw
         }
         public VeiwModel.PersonVeiwModel Ref_PersonVeiwModel { get; set; }
         public Form1 Ref_frm1 { get; set; }
+      
         #region [-txtname_Validating-]
         private void txtname_Validating(object sender, CancelEventArgs e)
         {
+            int i = 0;
             if (txtname.Text == "")
             {
                 lblname.Text = "Please Enter Name";
@@ -32,11 +35,42 @@ namespace Veiw
                 lblname.Text = "Correct";
                 lblname.ForeColor = Color.Green;
             }
+            for (int k = 0; k < txtname.Text.Length; k++)
+            {
+                {
+                    if (!(txtname.Text[k] >= 'a' & txtname.Text[k] <= 'z' || txtname.Text[k] >= 'A' & txtname.Text[k] <= 'Z'))
+                    {
+                        lblname.Text = "Username Should have just Character";
+                        lblname.ForeColor = Color.Red;
+                        txtname.Focus();
+                        i++;
+
+                    }
+                    if (i == 0)
+                    {
+                        if (txtname.Text[k] >= '0' & txtname.Text[k] <= '9')
+                        {
+                            lblname.Text = "Correct";
+                            lblname.ForeColor = Color.Green;
+
+                        }
+                    }
+                    if (i == 1)
+                    {
+                        continue;
+                    }
+
+
+
+
+                }
+            }
         }
         #endregion
         #region [-txtsurname_Validating_1-]
         private void txtsurname_Validating_1(object sender, CancelEventArgs e)
         {
+            int i = 0;
             if (txtsurname.Text == "")
             {
                 lblsurname.Text = "Please Enter Name";
@@ -48,11 +82,43 @@ namespace Veiw
                 lblsurname.Text = "Correct";
                 lblsurname.ForeColor = Color.Green;
             }
+            for (int k = 0; k < txtsurname.Text.Length; k++)
+            {
+                {
+                    if (!(txtsurname.Text[k] >= 'a' & txtsurname.Text[k] <= 'z'|| txtsurname.Text[k] >= 'A' & txtsurname.Text[k] <= 'Z'))
+                    {
+                        lblsurname.Text = "Username Should have just Character";
+                        lblsurname.ForeColor = Color.Red;
+                        txtsurname.Focus();
+                        i++;
+
+                    }
+                    if(i==0)
+                    {
+                        if (txtsurname.Text[k] >= '0' & txtsurname.Text[k] <= '9')
+                        {
+                            lblsurname.Text = "Correct";
+                            lblsurname.ForeColor = Color.Green;
+
+                        }
+                    }
+                    if(i==1)
+                    {
+                        continue;
+                    }
+
+                    
+
+
+                }
+            }
         }
         #endregion
         #region [-txtusername_Validating-]
+        
         private void txtusername_Validating(object sender, CancelEventArgs e)
         {
+            int i = 0;
             if (txtusername.Text != "")
             {
                 for (int k = 0; k < txtusername.Text.Length; k++)
@@ -63,13 +129,27 @@ namespace Veiw
                             lblusername.Text = "Username Should have just number";
                             lblusername.ForeColor = Color.Red;
                             txtusername.Focus();
+                            i++;
+                            
                         }
-                        if (txtusername.Text[k] >= '0' & txtusername.Text[k] <= '9')
+                        
+                        if(i==0)
                         {
-                            lblusername.Text = "Correct";
-                            lblusername.ForeColor = Color.Green;
+                            if (txtusername.Text[k] >= '0' & txtusername.Text[k] <= '9')
+                            {
+                                lblusername.Text = "Correct";
+                                lblusername.ForeColor = Color.Green;
+
+                            }
 
                         }
+                        if(i==1)
+                        {
+                            continue;
+                        }
+                          
+                        
+                    
                     }
                 }
             }
@@ -88,6 +168,7 @@ namespace Veiw
 
         private void txtpassword_Validating(object sender, CancelEventArgs e)
         {
+            int i = 0;
             if (txtpassword.Text != "")
             {
                 for (int k = 0; k < txtpassword.Text.Length; k++)
@@ -97,13 +178,22 @@ namespace Veiw
                         lblpassword.Text = "Username Should have just number";
                         lblpassword.ForeColor = Color.Red;
                         txtpassword.Focus();
+                        i++;
                     }
-                    if (txtpassword.Text[k] >= '0' & txtpassword.Text[k] <= '9')
+                    if(i==0)
                     {
-                        lblpassword.Text = "Correct";
-                        lblpassword.ForeColor = Color.Green;
-                        btnclick.Enabled = true;
+                        if (txtpassword.Text[k] >= '0' & txtpassword.Text[k] <= '9')
+                        {
+                            lblpassword.Text = "Correct";
+                            lblpassword.ForeColor = Color.Green;
+                            btnclick.Enabled = true;
+                        }
                     }
+                    if(i==1)
+                    {
+                        continue;
+                    }
+                  
                 }
             }
 
@@ -144,7 +234,7 @@ namespace Veiw
 
             if (CheckPassword >= 1)
             {
-                MessageBox.Show("Another User had Saved this Password before You saved");
+               
                 txtpassword.Text = "";
                 lblpassword.Text = "Another User had Saved this Password before You saved";
                 lblpassword.ForeColor = Color.Red;
@@ -153,10 +243,10 @@ namespace Veiw
             }
             if (CheckUsername >= 1)
             {
-                MessageBox.Show("Another User had Saved this Username before You saved");
-                txtpassword.Text = "";
+              
+                txtusername.Text = "";
                 lblusername.Text = "Another User had Saved this Password before You saved";
-                lblpassword.ForeColor = Color.Red;
+                lblusername.ForeColor = Color.Red;
                 btnclick.Enabled = false;
                 i++;
             }
@@ -180,8 +270,10 @@ namespace Veiw
                 if (i == 0)
                 {
                     Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
+                    
                     Ref_PersonVeiwModel.Save(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text));
                     MessageBox.Show("Saving is done Please Click Referesh");
+                   
                     txtname.Text = txtsurname.Text = txtusername.Text = txtpassword.Text = null;
                     lblname.Text = lblsurname.Text = lblusername.Text = lblpassword.Text = null;
 
