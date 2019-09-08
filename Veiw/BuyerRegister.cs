@@ -207,7 +207,8 @@ namespace Veiw
 
         }
         #endregion
-       
+
+        #region [-btnclick_Click-]
         private void btnclick_Click(object sender, EventArgs e)
         {
             int i = 0;
@@ -216,9 +217,9 @@ namespace Veiw
             Ref_frm1 = new Form1();
             Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
             Ref_frm1.dataGridView1.DataSource = Ref_PersonVeiwModel.FillGrid();
-           for(int j=0; j<Ref_frm1.dataGridView1.RowCount; j++)
+            for (int j = 0; j < Ref_frm1.dataGridView1.RowCount; j++)
             {
-                if (txtusername.Text == Convert.ToString(Ref_frm1.dataGridView1[3,j].Value))
+                if (txtusername.Text == Convert.ToString(Ref_frm1.dataGridView1[3, j].Value))
                 {
                     CheckUsername++;
 
@@ -234,7 +235,7 @@ namespace Veiw
 
             if (CheckPassword >= 1)
             {
-               
+
                 txtpassword.Text = "";
                 lblpassword.Text = "Another User had Saved this Password before You saved";
                 lblpassword.ForeColor = Color.Red;
@@ -243,7 +244,7 @@ namespace Veiw
             }
             if (CheckUsername >= 1)
             {
-              
+
                 txtusername.Text = "";
                 lblusername.Text = "Another User had Saved this Password before You saved";
                 lblusername.ForeColor = Color.Red;
@@ -270,10 +271,10 @@ namespace Veiw
                 if (i == 0)
                 {
                     Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
-                    
+
                     Ref_PersonVeiwModel.Save(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text));
                     MessageBox.Show("Saving is done Please Click Referesh");
-                   
+
                     txtname.Text = txtsurname.Text = txtusername.Text = txtpassword.Text = null;
                     lblname.Text = lblsurname.Text = lblusername.Text = lblpassword.Text = null;
 
@@ -281,11 +282,12 @@ namespace Veiw
 
             }
 
-        }
-          
-       
-        }
+        } 
+        #endregion
+
+
     }
+}
 
        
 
