@@ -8,9 +8,11 @@ namespace Model.DomainModel.POCO.Crud
 {
     interface ProductCrud1
     {
-        void Insert(string name, int id, int numberInShopping, int unitprice);
-        List<DomainModel.DTO.EF.Person> Select();
+        void Insert(string name, int numberInShopping, int unitprice);
+        List<DomainModel.DTO.EF.Product> Select();
         void Remove(int id);
-        void edit(string name, string surname, int username, int password, int id);
+        void edit(string name, int id, int numberInShopping, int unitprice);
+        int Check(int id);
+        void update(int id, int numbrtInShopping);
     }
 }

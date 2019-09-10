@@ -36,6 +36,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,8 @@
             // 
             this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem});
+            this.editToolStripMenuItem,
+            this.productToolStripMenuItem});
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
@@ -94,6 +96,13 @@
             this.editToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click_1);
+            // 
+            // productToolStripMenuItem
+            // 
+            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
+            this.productToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.productToolStripMenuItem.Text = "Product";
+            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // User
             // 
@@ -120,5 +129,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
     }
 }

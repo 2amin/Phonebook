@@ -50,7 +50,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 725);
+            this.toolStrip1.Size = new System.Drawing.Size(35, 725);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -63,7 +63,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(37, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(32, 24);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // signInToolStripMenuItem
@@ -99,7 +99,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(37, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(32, 6);
             // 
             // toolStripButton1
             // 
@@ -107,7 +107,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(37, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(32, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // MasterForm
@@ -119,6 +119,7 @@
             this.IsMdiContainer = true;
             this.Name = "MasterForm";
             this.Text = "MasterForm";
+            this.Load += new System.EventHandler(this.MasterForm_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

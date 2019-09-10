@@ -55,6 +55,9 @@ namespace Model.DomainModel.POCO.Base
             }
         }
 
+
+        #endregion
+        #region [-Select-]
         public List<Person> Select()
         {
             using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
@@ -80,6 +83,7 @@ namespace Model.DomainModel.POCO.Base
             }
         }
         #endregion
+        #region [-Remove-]
         public void Remove(int id)
         {
             using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
@@ -89,9 +93,9 @@ namespace Model.DomainModel.POCO.Base
                     var Ref_Person = new Person();
                     Ref_Person = Context.Person.Find(id);
                     Context.Person.Remove(Ref_Person);
-                    
 
-                    
+
+
                     Context.SaveChanges();
                 }
                 catch (Exception)
@@ -100,7 +104,7 @@ namespace Model.DomainModel.POCO.Base
                 }
                 finally
                 {
-                    if(Context != null)
+                    if (Context != null)
                     {
                         Context.Dispose();
 
@@ -109,7 +113,8 @@ namespace Model.DomainModel.POCO.Base
 
             }
         }
-
+        #endregion
+        #region [-edit-]
         public void edit(string name, string surname, int username, int password, int id)
         {
             using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
@@ -144,8 +149,9 @@ namespace Model.DomainModel.POCO.Base
                     }
                 }
             }
-        }
+        } 
+        #endregion
 
-       
+
     }
 }

@@ -54,5 +54,11 @@ namespace Veiw
             Ref_Edit.Show();
 
         }
+        public Buyer_Products Ref_Buyerproduct { get; set; }
+        private void productToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ref_Buyerproduct = new Buyer_Products();
+            Ref_Buyerproduct.Show();
+        }
     }
 }
