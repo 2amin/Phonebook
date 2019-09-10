@@ -14,12 +14,10 @@ namespace Model.DomainModel.DTO.EF
     
     public partial class Product
     {
-        public int Unitprice { get; set; }
-        public int Number { get; set; }
-        public int Discount { get; set; }
+        public Nullable<decimal> UnitPrice { get; set; }
+        public Nullable<int> NumberOfOrder { get; set; }
+        public Nullable<int> NumberInShopping { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public int All { get; set; }
-        public int id { get; set; }
-        public string Ref_Person { get; set; }
     }
 }

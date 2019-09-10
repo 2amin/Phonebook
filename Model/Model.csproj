@@ -69,11 +69,22 @@
     <Compile Include="DomainModel\DTO\EF\Person.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DomainModel\DTO\EF\Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DomainModel\DTO\EF\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DomainModel\DTO\EF\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DomainModel\DTO\EF\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DomainModel\POCO\Base\PersonCrud.cs" />
-    <Compile Include="DomainModel\POCO\Crud\Crud.cs" />
+    <Compile Include="DomainModel\POCO\Base\PersonBase1.cs" />
+    <Compile Include="DomainModel\POCO\Base\ProductBase1.cs" />
+    <Compile Include="DomainModel\POCO\Crud\PersonCrud1.cs" />
+    <Compile Include="DomainModel\POCO\Crud\ProductCrud1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

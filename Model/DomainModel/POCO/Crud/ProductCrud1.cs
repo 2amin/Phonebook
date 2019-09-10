@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Model.DomainModel.POCO.Crud
 {
-    interface Crud
+    interface ProductCrud1
     {
-        void Insert(string name, string surname, int username, int password);
+        void Insert(string name, int id, int numberInShopping, int unitprice);
         List<DomainModel.DTO.EF.Person> Select();
         void Remove(int id);
         void edit(string name, string surname, int username, int password, int id);
-      
-            
-    }   
+    }
 }

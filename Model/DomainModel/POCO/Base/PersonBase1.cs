@@ -7,10 +7,10 @@ using Model.DomainModel.DTO.EF;
 
 namespace Model.DomainModel.POCO.Base
 {
-    public class PersonCrud : Crud.Crud
+    public class PersonBase1 : Crud.PersonCrud1
     {
         #region [-Ctor-]
-        public PersonCrud()
+        public PersonBase1()
         {
 
         }
@@ -22,7 +22,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-Insert-]
         public void Insert(string name, string surname, int username, int password)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities4())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
             {
 
                 try
@@ -57,7 +57,7 @@ namespace Model.DomainModel.POCO.Base
 
         public List<Person> Select()
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities4())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
             {
                 try
                 {
@@ -82,7 +82,7 @@ namespace Model.DomainModel.POCO.Base
         #endregion
         public void Remove(int id)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities4())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
             {
                 try
                 {
@@ -112,7 +112,7 @@ namespace Model.DomainModel.POCO.Base
 
         public void edit(string name, string surname, int username, int password, int id)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities4())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
             {
                 try
                 {
