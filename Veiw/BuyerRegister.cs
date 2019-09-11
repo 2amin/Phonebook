@@ -13,10 +13,12 @@ namespace Veiw
 {
     public partial class BuyerRegister : Form
     {
+        #region [-Ctor-]
         public BuyerRegister()
         {
             InitializeComponent();
-        }
+        } 
+        #endregion
         public VeiwModel.PersonVeiwModel Ref_PersonVeiwModel { get; set; }
         public Form1 Ref_frm1 { get; set; }
       
@@ -207,7 +209,6 @@ namespace Veiw
 
         }
         #endregion
-
         #region [-btnclick_Click-]
         private void btnclick_Click(object sender, EventArgs e)
         {

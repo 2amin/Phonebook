@@ -12,14 +12,15 @@ namespace Veiw
 {
     public partial class Form1 : Form
     {
+        #region [-Ctor-]
         public Form1()
         {
-       
+
             InitializeComponent();
-            
-        }
+
+        } 
+        #endregion
         public VeiwModel.PersonVeiwModel Ref_PersonVeiwModel { get; set; }
-       
         #region [-btnsave_Click-]
         int i = 0;
         
@@ -213,7 +214,6 @@ namespace Veiw
             
         }
         #endregion
-
         #region [-txtpassword_Validating-]
         private void txtpassword_Validating(object sender, CancelEventArgs e)
         {

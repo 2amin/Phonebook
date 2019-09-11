@@ -105,7 +105,7 @@
             this.MinimumSize = new System.Drawing.Size(333, 241);
             this.Name = "SellerSignin";
             this.Text = "SellerSignin";
-            this.Load += new System.EventHandler(this.SellerSignin_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

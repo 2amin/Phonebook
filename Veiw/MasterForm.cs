@@ -12,37 +12,33 @@ namespace Veiw
 {
     public partial class MasterForm : Form
     {
+        #region [-Ctor-]
         public MasterForm()
         {
             InitializeComponent();
         }
-
-        private void signInToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        #endregion
+        #region [-signUpToolStripMenuItem_Click-]
         private void signUpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuyerRegister Ref_frm1 = new BuyerRegister();
             Ref_frm1.MdiParent = this;
-            
+
             Ref_frm1.Show();
         }
-
+        #endregion
+        #region [-sellerToolStripMenuItem_Click-]
         private void sellerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SellerSignin Ref_Sellersignin = new SellerSignin();
-           
+
             User Ref_User = new User();
             Ref_Sellersignin.MdiParent = this;
-            
+
             Ref_Sellersignin.Show();
-        }
+        } 
+        #endregion
 
-        private void MasterForm_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

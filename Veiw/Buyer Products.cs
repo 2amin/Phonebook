@@ -12,24 +12,28 @@ namespace Veiw
 {
     public partial class Buyer_Products : Form
     {
+        #region [-Ctor-]
         public Buyer_Products()
         {
             InitializeComponent();
-        }
+        } 
+        #endregion
         public VeiwModel.ProductVeiwModel1 Ref_ProductVeiwModel { get; set; }
+        #region [-btnrefersh_Click-]
         private void btnrefersh_Click(object sender, EventArgs e)
         {
             Ref_ProductVeiwModel = new VeiwModel.ProductVeiwModel1();
-            dataGridView1.DataSource= Ref_ProductVeiwModel.FillGrid();
+            dataGridView1.DataSource = Ref_ProductVeiwModel.FillGrid();
         }
-
+        #endregion
+        #region [-Buyer_Products_Load-]
         private void Buyer_Products_Load(object sender, EventArgs e)
         {
             Ref_ProductVeiwModel = new VeiwModel.ProductVeiwModel1();
             dataGridView1.DataSource = Ref_ProductVeiwModel.FillGrid();
         }
-        
-
+        #endregion
+        #region [-btnsave_Click-]
         private void btnsave_Click(object sender, EventArgs e)
         {
             int i = 0;
@@ -63,7 +67,8 @@ namespace Veiw
 
                 }
             }
-        }
-       
+        } 
+        #endregion
+
     }
 }

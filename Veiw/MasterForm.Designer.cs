@@ -74,7 +74,7 @@
             this.signInToolStripMenuItem.Name = "signInToolStripMenuItem";
             this.signInToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.signInToolStripMenuItem.Text = "Sign In";
-            this.signInToolStripMenuItem.Click += new System.EventHandler(this.signInToolStripMenuItem_Click);
+           
             // 
             // sellerToolStripMenuItem
             // 
@@ -119,7 +119,7 @@
             this.IsMdiContainer = true;
             this.Name = "MasterForm";
             this.Text = "MasterForm";
-            this.Load += new System.EventHandler(this.MasterForm_Load);
+            
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
