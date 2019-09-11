@@ -93,14 +93,14 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click_1);
             // 
             // productToolStripMenuItem
             // 
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.productToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.productToolStripMenuItem.Text = "Product";
             this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
@@ -113,6 +113,7 @@
             this.IsMdiContainer = true;
             this.Name = "User";
             this.Text = "User";
+            this.Load += new System.EventHandler(this.User_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

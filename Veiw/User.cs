@@ -60,5 +60,10 @@ namespace Veiw
             Ref_Buyerproduct = new Buyer_Products();
             Ref_Buyerproduct.Show();
         }
+
+        private void User_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

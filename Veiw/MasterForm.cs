@@ -33,7 +33,7 @@ namespace Veiw
         private void sellerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SellerSignin Ref_Sellersignin = new SellerSignin();
-            Ref_Sellersignin.Close();
+           
             User Ref_User = new User();
             Ref_Sellersignin.MdiParent = this;
             
