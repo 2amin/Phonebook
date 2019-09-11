@@ -26,6 +26,7 @@ namespace Veiw
             int i = 0;
             Ref_frm1 = new Form1();
             Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
+            Ref_frm1.dataGridView1.DataSource = Ref_PersonVeiwModel.FillGrid();
            
             for (int j = 0; j < Ref_frm1.dataGridView1.RowCount; j++)
             {
@@ -34,7 +35,7 @@ namespace Veiw
                     if (txtusername.Text == Convert.ToString(Ref_frm1.dataGridView1[3, j].Value) &
                    txtpassword.Text == Convert.ToString(Ref_frm1.dataGridView1[4, j].Value))
                     {
-                        i--;
+                        i++;
                         Ref_User = new User();
                         Ref_Edit = new Edit();
                         Ref_User.toolStripLabel1.Text = "Welcome";
@@ -48,7 +49,7 @@ namespace Veiw
                 }
                if(i==1)
                 {
-                    continue;
+                    break;
                 }
                 
             }
