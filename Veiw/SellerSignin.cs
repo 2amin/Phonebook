@@ -46,7 +46,7 @@ namespace Veiw
                         txtpassword.Text = txtusername.Text = null;
                     }
                 }
-               if(i==0)
+               if(i==1)
                 {
                     continue;
                 }
