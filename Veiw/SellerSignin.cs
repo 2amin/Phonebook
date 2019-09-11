@@ -23,13 +23,13 @@ namespace Veiw
         
         private void btnenter_Click(object sender, EventArgs e)
         {
-            int i = 1;
+            int i = 0;
             Ref_frm1 = new Form1();
             Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
            
             for (int j = 0; j < Ref_frm1.dataGridView1.RowCount; j++)
             {
-                if(i==1)
+                if(i==0)
                 {
                     if (txtusername.Text == Convert.ToString(Ref_frm1.dataGridView1[3, j].Value) &
                    txtpassword.Text == Convert.ToString(Ref_frm1.dataGridView1[4, j].Value))
