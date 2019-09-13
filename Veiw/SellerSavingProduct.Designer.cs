@@ -39,6 +39,9 @@
             this.btndelete = new System.Windows.Forms.Button();
             this.btnedit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblunitprice = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
+            this.lblnumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,7 +130,6 @@
             this.btnedit.TabIndex = 11;
             this.btnedit.Text = "Edit";
             this.btnedit.UseVisualStyleBackColor = true;
-           
             // 
             // dataGridView1
             // 
@@ -138,11 +140,38 @@
             this.dataGridView1.Size = new System.Drawing.Size(820, 277);
             this.dataGridView1.TabIndex = 12;
             // 
+            // lblunitprice
+            // 
+            this.lblunitprice.AutoSize = true;
+            this.lblunitprice.Location = new System.Drawing.Point(225, 53);
+            this.lblunitprice.Name = "lblunitprice";
+            this.lblunitprice.Size = new System.Drawing.Size(0, 17);
+            this.lblunitprice.TabIndex = 0;
+            // 
+            // lblname
+            // 
+            this.lblname.AutoSize = true;
+            this.lblname.Location = new System.Drawing.Point(416, 18);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(0, 17);
+            this.lblname.TabIndex = 0;
+            // 
+            // lblnumber
+            // 
+            this.lblnumber.AutoSize = true;
+            this.lblnumber.Location = new System.Drawing.Point(404, 78);
+            this.lblnumber.Name = "lblnumber";
+            this.lblnumber.Size = new System.Drawing.Size(0, 17);
+            this.lblnumber.TabIndex = 0;
+            // 
             // Saving_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 514);
+            this.Controls.Add(this.lblnumber);
+            this.Controls.Add(this.lblname);
+            this.Controls.Add(this.lblunitprice);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btndelete);
@@ -175,5 +204,8 @@
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblunitprice;
+        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Label lblnumber;
     }
 }

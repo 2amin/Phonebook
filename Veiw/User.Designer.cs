@@ -113,7 +113,7 @@
             this.IsMdiContainer = true;
             this.Name = "User";
             this.Text = "User";
-            this.Load += new System.EventHandler(this.User_Load);
+            
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -45,6 +45,8 @@
             this.lblerorusername = new System.Windows.Forms.Label();
             this.lblerorsurname = new System.Windows.Forms.Label();
             this.lblerorpassword = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtemail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             // lblsurname
             // 
             this.lblsurname.AutoSize = true;
-            this.lblsurname.Location = new System.Drawing.Point(30, 42);
+            this.lblsurname.Location = new System.Drawing.Point(30, 38);
             this.lblsurname.Name = "lblsurname";
             this.lblsurname.Size = new System.Drawing.Size(65, 17);
             this.lblsurname.TabIndex = 0;
@@ -69,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 77);
+            this.label3.Location = new System.Drawing.Point(30, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 0;
@@ -78,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 109);
+            this.label4.Location = new System.Drawing.Point(30, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 0;
@@ -94,7 +96,7 @@
             // 
             // txtsurname
             // 
-            this.txtsurname.Location = new System.Drawing.Point(138, 42);
+            this.txtsurname.Location = new System.Drawing.Point(138, 33);
             this.txtsurname.Name = "txtsurname";
             this.txtsurname.Size = new System.Drawing.Size(132, 22);
             this.txtsurname.TabIndex = 2;
@@ -102,7 +104,7 @@
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(138, 111);
+            this.txtpassword.Location = new System.Drawing.Point(138, 89);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(132, 22);
             this.txtpassword.TabIndex = 4;
@@ -110,7 +112,7 @@
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(138, 77);
+            this.txtusername.Location = new System.Drawing.Point(138, 61);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(132, 22);
             this.txtusername.TabIndex = 3;
@@ -198,11 +200,29 @@
             this.lblerorpassword.Size = new System.Drawing.Size(0, 17);
             this.lblerorpassword.TabIndex = 20;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 17);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Email";
+            // 
+            // txtemail
+            // 
+            this.txtemail.Location = new System.Drawing.Point(138, 117);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(174, 22);
+            this.txtemail.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtemail);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblerorpassword);
             this.Controls.Add(this.lblerorsurname);
             this.Controls.Add(this.lblerorusername);
@@ -249,6 +269,8 @@
         public System.Windows.Forms.TextBox txtpassword;
         public System.Windows.Forms.TextBox txtusername;
         public System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtemail;
     }
 }
 

@@ -20,9 +20,9 @@ namespace Model.DomainModel.POCO.Base
 
         #endregion
         #region [-Insert-]
-        public void Insert(string name, string surname, int username, int password)
+        public void Insert(string name, string surname, int username, int password,string email)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
 
                 try
@@ -32,6 +32,7 @@ namespace Model.DomainModel.POCO.Base
                     Ref_Person.Surname = surname;
                     Ref_Person.UserName = (username);
                     Ref_Person.Password = (password);
+                    Ref_Person.Email = email;
                     Context.Person.Add(Ref_Person);
                     Context.SaveChanges();
 
@@ -60,7 +61,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-Select-]
         public List<Person> Select()
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
                 try
                 {
@@ -86,7 +87,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-Remove-]
         public void Remove(int id)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
                 try
                 {
@@ -115,9 +116,9 @@ namespace Model.DomainModel.POCO.Base
         }
         #endregion
         #region [-edit-]
-        public void edit(string name, string surname, int username, int password, int id)
+        public void edit(string name, string surname, int username, int password,string email, int id)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
                 try
                 {
@@ -127,6 +128,7 @@ namespace Model.DomainModel.POCO.Base
                     Ref_Person.Surname = surname;
                     Ref_Person.UserName = username;
                     Ref_Person.Password = password;
+                    Ref_Person.Email = email;
                     Context.SaveChanges();
 
 

@@ -17,11 +17,11 @@ namespace VeiwModel
         public Model.DomainModel.POCO.Base.PersonBase1 Ref_PersonCrud { get; set; }
         #region [-Funection-]
         #region [-Save-]
-        public void Save(string name, string surname, int username, int password)
+        public void Save(string name, string surname, int username, int password,string email)
         {
             Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonBase1();
 
-            Ref_PersonCrud.Insert(name, surname, username, password);
+            Ref_PersonCrud.Insert(name, surname, username, password,email);
         }
         #endregion
         #region [-FillGrid-]
@@ -40,10 +40,10 @@ namespace VeiwModel
         }
         #endregion
         #region [-Edit-]
-        public void Edit(string name, string surname, int username, int password, int id)
+        public void Edit(string name, string surname, int username, int password,string email, int id)
         {
             Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonBase1();
-            Ref_PersonCrud.edit(name, surname, username, password, id);
+            Ref_PersonCrud.edit(name, surname, username, password,email, id);
 
         }  
         #endregion

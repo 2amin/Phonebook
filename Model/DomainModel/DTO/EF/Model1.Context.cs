@@ -15,10 +15,10 @@ namespace Model.DomainModel.DTO.EF
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class OnlineShoppingEntities : DbContext
+    public partial class OnlineShoppingEntities1 : DbContext
     {
-        public OnlineShoppingEntities()
-            : base("name=OnlineShoppingEntities")
+        public OnlineShoppingEntities1()
+            : base("name=OnlineShoppingEntities1")
         {
         }
     

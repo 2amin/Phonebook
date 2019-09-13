@@ -171,9 +171,9 @@ namespace Veiw
         private void txtpassword_Validating(object sender, CancelEventArgs e)
         {
             int i = 0;
-            if (txtpassword.Text != "")
+            if (txtemail.Text != "")
             {
-                for (int k = 0; k < txtpassword.Text.Length; k++)
+                for (int k = 0; k < txtemail.Text.Length; k++)
                 {
                     if (!(txtpassword.Text[k] >= '0' & txtpassword.Text[k] <= '9'))
                     {
@@ -182,7 +182,7 @@ namespace Veiw
                         txtpassword.Focus();
                         i++;
                     }
-                    if(i==0)
+                    if (i == 0)
                     {
                         if (txtpassword.Text[k] >= '0' & txtpassword.Text[k] <= '9')
                         {
@@ -191,11 +191,11 @@ namespace Veiw
                             btnclick.Enabled = true;
                         }
                     }
-                    if(i==1)
+                    if (i == 1)
                     {
                         continue;
                     }
-                  
+
                 }
             }
 
@@ -209,7 +209,16 @@ namespace Veiw
 
         }
         #endregion
+        private void txtemail_Validating(object sender, CancelEventArgs e)
+        {
+           
+        }
+
+
+
+
         #region [-btnclick_Click-]
+        ClassLibrary1.LifeCycle.Email<string> email;
         private void btnclick_Click(object sender, EventArgs e)
         {
             int i = 0;
@@ -273,8 +282,13 @@ namespace Veiw
                 {
                     Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
 
-                    Ref_PersonVeiwModel.Save(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text));
+                    Ref_PersonVeiwModel.Save(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text),txtemail.Text);
                     MessageBox.Show("Saving is done Please Click Referesh");
+                    email = new ClassLibrary1.LifeCycle.Email<string>("This Information are Saved"+" "+
+                        "Welcome to Our Shopping"+" "+txtname.Text+" "+txtsurname.Text+" "+"your username is"+" "+txtusername.Text+""+
+                        "your password is"+" "+txtpassword.Text,"aminnabavi859@gmail.com","alifati2",
+                        txtemail.Text);
+                    email.Send();
 
                     txtname.Text = txtsurname.Text = txtusername.Text = txtpassword.Text = null;
                     lblname.Text = lblsurname.Text = lblusername.Text = lblpassword.Text = null;
@@ -283,10 +297,11 @@ namespace Veiw
 
             }
 
-        } 
+        }
+
         #endregion
 
-
+        
     }
 }
 

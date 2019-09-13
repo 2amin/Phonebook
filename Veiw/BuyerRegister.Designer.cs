@@ -43,6 +43,7 @@
             this.lblpassword = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
+            this.lblemail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -162,7 +163,7 @@
             this.label5.Location = new System.Drawing.Point(38, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 17);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Email";
             // 
             // txtemail
@@ -171,12 +172,22 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(158, 22);
             this.txtemail.TabIndex = 5;
+            this.txtemail.Validating += new System.ComponentModel.CancelEventHandler(this.txtemail_Validating);
+            // 
+            // lblemail
+            // 
+            this.lblemail.AutoSize = true;
+            this.lblemail.Location = new System.Drawing.Point(313, 147);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(0, 17);
+            this.lblemail.TabIndex = 11;
             // 
             // BuyerRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 252);
+            this.Controls.Add(this.lblemail);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblpassword);
@@ -216,5 +227,6 @@
         private System.Windows.Forms.Label lblpassword;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.Label lblemail;
     }
 }

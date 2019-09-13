@@ -82,7 +82,7 @@ namespace Veiw
                 if (i == 0)
                 {
                     Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
-                    Ref_PersonVeiwModel.Save(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text));
+                    Ref_PersonVeiwModel.Save(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text),txtemail.Text);
                     MessageBox.Show("Saving is done Please Click Referesh");
                     txtname.Text = txtsurname.Text = txtusername.Text = txtpassword.Text = null;
                     lblerorname.Text = lblerorsurname.Text = lblerorusername.Text = lblerorpassword.Text = null;

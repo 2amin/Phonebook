@@ -43,6 +43,8 @@
             this.lbl_surname = new System.Windows.Forms.Label();
             this.lblname = new System.Windows.Forms.Label();
             this.lblpassword = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtemail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtusername
@@ -100,7 +102,7 @@
             // btnedit
             // 
             this.btnedit.Enabled = false;
-            this.btnedit.Location = new System.Drawing.Point(203, 143);
+            this.btnedit.Location = new System.Drawing.Point(244, 171);
             this.btnedit.Name = "btnedit";
             this.btnedit.Size = new System.Drawing.Size(112, 89);
             this.btnedit.TabIndex = 5;
@@ -111,7 +113,7 @@
             // lblid
             // 
             this.lblid.AutoSize = true;
-            this.lblid.Location = new System.Drawing.Point(36, 143);
+            this.lblid.Location = new System.Drawing.Point(-2, 171);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(21, 17);
             this.lblid.TabIndex = 18;
@@ -136,7 +138,7 @@
             // btnreferesh
             // 
             this.btnreferesh.Enabled = false;
-            this.btnreferesh.Location = new System.Drawing.Point(73, 143);
+            this.btnreferesh.Location = new System.Drawing.Point(129, 171);
             this.btnreferesh.Name = "btnreferesh";
             this.btnreferesh.Size = new System.Drawing.Size(102, 89);
             this.btnreferesh.TabIndex = 6;
@@ -176,12 +178,30 @@
             this.lblpassword.Size = new System.Drawing.Size(0, 17);
             this.lblpassword.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(2, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Email";
+            // 
+            // txtemail
+            // 
+            this.txtemail.Location = new System.Drawing.Point(77, 139);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(187, 22);
+            this.txtemail.TabIndex = 20;
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 233);
+            this.ClientSize = new System.Drawing.Size(621, 262);
             this.ControlBox = false;
+            this.Controls.Add(this.txtemail);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblpassword);
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.lbl_surname);
@@ -221,5 +241,7 @@
         private System.Windows.Forms.Label lbl_surname;
         private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.Label lblpassword;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtemail;
     }
 }

@@ -19,5 +19,6 @@ namespace Model.DomainModel.DTO.EF
         public string Surname { get; set; }
         public Nullable<int> UserName { get; set; }
         public Nullable<int> Password { get; set; }
+        public string Email { get; set; }
     }
 }

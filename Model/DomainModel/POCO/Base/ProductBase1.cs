@@ -20,7 +20,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-edit-]
         public void edit(string name, int id, int numberInShopping, int unitprice)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
                 try
                 {
@@ -51,7 +51,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-Inserting Product-]
         public void Insert(string name, int numberInShopping, int unitprice)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
 
                 try
@@ -86,7 +86,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-Remove-]
         public void Remove(int id)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
                 try
                 {
@@ -114,7 +114,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-Select-]
         public List<Product> Select()
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
                 try
                 {
@@ -140,7 +140,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-Check-]
         public int Check(int id)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
                 try
                 {
@@ -167,7 +167,7 @@ namespace Model.DomainModel.POCO.Base
         #region [-update-]
         public void update(int id, int numbrtInShopping)
         {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities())
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
                 try
                 {
