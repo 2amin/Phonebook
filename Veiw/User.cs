@@ -42,6 +42,7 @@ namespace Veiw
                         Ref_Edit.txtsurname.Text = Convert.ToString(Ref_Form1.dataGridView1[2, j].Value);
                         Ref_Edit.txtusername.Text = Convert.ToString(Ref_Form1.dataGridView1[3, j].Value);
                         Ref_Edit.txtpassword.Text = Convert.ToString(Ref_Form1.dataGridView1[4, j].Value);
+                        Ref_Edit.txtemail.Text=Convert.ToString(Ref_Form1.dataGridView1[5,j].Value);
                         Ref_Edit.lblid.Text = Convert.ToString(Ref_Form1.dataGridView1[0, j].Value);
 
                         i++;

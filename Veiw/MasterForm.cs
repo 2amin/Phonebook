@@ -36,9 +36,14 @@ namespace Veiw
             Ref_Sellersignin.MdiParent = this;
 
             Ref_Sellersignin.Show();
-        } 
+        }
+
+
         #endregion
 
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -171,13 +171,13 @@ namespace Veiw
         private void txtpassword_Validating(object sender, CancelEventArgs e)
         {
             int i = 0;
-            if (txtemail.Text != "")
+            if (txtpassword.Text != "")
             {
-                for (int k = 0; k < txtemail.Text.Length; k++)
+                for (int k = 0; k < txtpassword.Text.Length; k++)
                 {
                     if (!(txtpassword.Text[k] >= '0' & txtpassword.Text[k] <= '9'))
                     {
-                        lblpassword.Text = "Username Should have just number";
+                        lblpassword.Text = "Password Should have just number";
                         lblpassword.ForeColor = Color.Red;
                         txtpassword.Focus();
                         i++;
@@ -209,14 +209,17 @@ namespace Veiw
 
         }
         #endregion
+        #region [-txtemail_Validating-]
         private void txtemail_Validating(object sender, CancelEventArgs e)
         {
-           
-        }
+            if (txtemail.Text == "")
+            {
+                lblemail.Text = "If You Want to Keep In touch with Shop Please Enter Your Email";
+                lblemail.ForeColor = Color.Orange;
+            }
 
-
-
-
+        }  
+        #endregion
         #region [-btnclick_Click-]
         ClassLibrary1.LifeCycle.Email<string> email;
         private void btnclick_Click(object sender, EventArgs e)
