@@ -79,15 +79,15 @@
             // sellerToolStripMenuItem
             // 
             this.sellerToolStripMenuItem.Name = "sellerToolStripMenuItem";
-            this.sellerToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
-            this.sellerToolStripMenuItem.Text = "Seller";
+            this.sellerToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.sellerToolStripMenuItem.Text = "Buyer";
             this.sellerToolStripMenuItem.Click += new System.EventHandler(this.sellerToolStripMenuItem_Click);
             // 
             // buyerToolStripMenuItem
             // 
             this.buyerToolStripMenuItem.Name = "buyerToolStripMenuItem";
-            this.buyerToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
-            this.buyerToolStripMenuItem.Text = "Buyer";
+            this.buyerToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.buyerToolStripMenuItem.Text = "Seller";
             // 
             // signUpToolStripMenuItem
             // 
