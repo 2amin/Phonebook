@@ -216,7 +216,7 @@ namespace Veiw
         {
 
             Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
-            Ref_PersonVeiwModel.Edit(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text), txtemail.Text, Convert.ToInt32(lblid.Text));
+            
             btnreferesh.Enabled = true;
             int i = 0;
             int CheckUsername = 0;
@@ -279,9 +279,8 @@ namespace Veiw
                 {
                     Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
 
-                    Ref_PersonVeiwModel.Save(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text),txtemail.Text);
-                    MessageBox.Show("Saving is done Please Click Referesh");
 
+                    Ref_PersonVeiwModel.Edit(txtname.Text, txtsurname.Text, Convert.ToInt32(txtusername.Text), Convert.ToInt32(txtpassword.Text), txtemail.Text, Convert.ToInt32(lblid.Text));
                     txtname.Text = txtsurname.Text = txtusername.Text = txtpassword.Text = null;
                     lblname.Text = lblsurname.Text = lblusername.Text = lblpassword.Text = null;
 

@@ -22,13 +22,17 @@ namespace Veiw
         public Form1 Ref_frm1 { get; set; }
         public User Ref_User { get; set; }
         public Edit Ref_Edit { get; set; }
+        public MasterForm Ref_Masterform { get; set; }
         #region [-btnenter_Click-]
         private void btnenter_Click(object sender, EventArgs e)
         {
             int i = 0;
             Ref_frm1 = new Form1();
             Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
+            Ref_Masterform = new MasterForm();
             Ref_frm1.dataGridView1.DataSource = Ref_PersonVeiwModel.FillGrid();
+            Ref_User = new User();
+            //Ref_User.MdiParent =Ref_Masterform;
 
             for (int j = 0; j < Ref_frm1.dataGridView1.RowCount; j++)
             {

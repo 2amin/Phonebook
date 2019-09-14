@@ -45,6 +45,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(799, 375);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // dataGridView2
             // 
@@ -66,11 +67,12 @@
             // 
             // txtid
             // 
+            this.txtid.Enabled = false;
             this.txtid.Location = new System.Drawing.Point(412, 24);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(315, 22);
+            this.txtid.Size = new System.Drawing.Size(348, 22);
             this.txtid.TabIndex = 0;
-            this.txtid.Text = "Please Click the Id of Product which You Want";
+            this.txtid.Text = "Please Click on row of Prodect Product which You Want";
             // 
             // btnsave
             // 

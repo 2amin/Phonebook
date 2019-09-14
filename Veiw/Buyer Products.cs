@@ -67,8 +67,13 @@ namespace Veiw
 
                 }
             }
-        } 
+        }
         #endregion
 
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+           var x = Convert.ToInt32(dataGridView1.CurrentRow.Index);
+            txtid.Text = Convert.ToString(dataGridView1[3, x].Value);
+        }
     }
 }

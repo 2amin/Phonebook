@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model.DomainModel.DTO.EF;
+using Model.DomainModel.POCO.Crud;
 
 namespace Model.DomainModel.POCO.Base
 {
-    public class PersonBase1 : Crud.PersonCrud1
+    public class PersonBase1 : PersonCrud1
     {
         #region [-Ctor-]
         public PersonBase1()
@@ -151,9 +152,155 @@ namespace Model.DomainModel.POCO.Base
                     }
                 }
             }
+        }
+
+        public List<Person> Check(int id)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+        #region [-Findname-]
+        public string Findname(int id)
+        {
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
+            {
+                try
+                {
+                    var Ref_Person = new Person();
+                    Ref_Person = Context.Person.Find(id);
+                    return Ref_Person.FirstName;
+
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (Context != null)
+                    {
+                        Context.Dispose();
+
+                    }
+                }
+
+            }
+        }
+        #endregion
+        #region [-Findsurame-]
+        public string Findsurame(int id)
+        {
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
+            {
+                try
+                {
+                    var Ref_Person = new Person();
+                    Ref_Person = Context.Person.Find(id);
+                    return Ref_Person.Surname;
+
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (Context != null)
+                    {
+                        Context.Dispose();
+
+                    }
+                }
+
+            }
+        }
+        #endregion
+        #region [-Findusername-]
+        public string Findusername(int id)
+        {
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
+            {
+                try
+                {
+                    var Ref_Person = new Person();
+                    Ref_Person = Context.Person.Find(id);
+                    return Convert.ToString(Ref_Person.UserName);
+
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (Context != null)
+                    {
+                        Context.Dispose();
+
+                    }
+                }
+
+            }
+        }
+        #endregion
+        #region [-Findpassword-]
+        public string Findpassword(int id)
+        {
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
+            {
+                try
+                {
+                    var Ref_Person = new Person();
+                    Ref_Person = Context.Person.Find(id);
+                    return Convert.ToString(Ref_Person.Password);
+
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (Context != null)
+                    {
+                        Context.Dispose();
+
+                    }
+                }
+
+            }
+        }
+
+
+        #endregion
+        #region [-Findemail-]
+        public string Findemail(int id)
+        {
+            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
+            {
+                try
+                {
+                    var Ref_Person = new Person();
+                    Ref_Person = Context.Person.Find(id);
+                    return Ref_Person.Email;
+
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (Context != null)
+                    {
+                        Context.Dispose();
+
+                    }
+                }
+
+            }
         } 
         #endregion
-
 
     }
 }

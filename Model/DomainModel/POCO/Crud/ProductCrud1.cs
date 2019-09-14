@@ -12,7 +12,8 @@ namespace Model.DomainModel.POCO.Crud
         List<DomainModel.DTO.EF.Product> Select();
         void Remove(int id);
         void edit(string name, int id, int numberInShopping, int unitprice);
-        int Check(int id);
+       
         void update(int id, int numbrtInShopping);
+        
     }
 }
