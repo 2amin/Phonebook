@@ -220,6 +220,7 @@
             this.MinimumSize = new System.Drawing.Size(297, 280);
             this.Name = "Edit";
             this.Text = "Edit";
+            this.Load += new System.EventHandler(this.Edit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

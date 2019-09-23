@@ -47,44 +47,11 @@ namespace VeiwModel
 
         }
         #endregion
-        #region [-Discovername-]
-        public string Discovername(int id)
+        #region [-Serialize-]
+        public void Serialize(int id)
         {
             Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonBase1();
-           return Ref_PersonCrud.Findname(id);
-
-        }
-        #endregion
-        #region [-Discoversurname-]
-        public string  Discoversurname(int id)
-        {
-            Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonBase1();
-           return Ref_PersonCrud.Findsurame(id);
-
-        }
-        #endregion
-        #region [-Discoverusername-]
-        public string Discoverusername(int id)
-        {
-            Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonBase1();
-           return Ref_PersonCrud.Findusername(id);
-
-        }
-        #endregion
-        #region [-Discoverpassword-]
-        public string Discoverpassword(int id)
-        {
-            Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonBase1();
-            return Ref_PersonCrud.Findpassword(id);
-
-        }
-        #endregion
-        #region [-Discoveremail-]
-        public string Discoveremail(int id)
-        {
-            Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonBase1();
-            return Ref_PersonCrud.Findemail(id);
-
+            Ref_PersonCrud.Find(id);
         } 
         #endregion
     }

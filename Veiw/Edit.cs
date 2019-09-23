@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +23,16 @@ namespace Veiw
 
         } 
         #endregion
+        private void Deserialize()
+        {
+            using (FileStream fs = new FileStream("ser1.txt", FileMode.Open, FileAccess.Read))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                Model.DomainModel.DTO.EF.Person p = (Model.DomainModel.DTO.EF.Person)bf.Deserialize(fs);
+                txtname.Text = p.FirstName;
+              
+            }
+        }
         #region [-txtname_Validating-]
         private void txtname_Validating(object sender, CancelEventArgs e)
         {
@@ -299,9 +311,13 @@ namespace Veiw
             Ref_frm1.dataGridView1.DataSource = Ref_PersonVeiwModel.FillGrid();
             this.Close();
 
-        } 
+        }
+
         #endregion
 
-
+        private void Edit_Load(object sender, EventArgs e)
+        {
+            Deserialize();
+        }
     }
 }

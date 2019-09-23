@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using Model.DomainModel.DTO.EF;
 using Model.DomainModel.POCO.Crud;
+using System.Threading;
 
 namespace Model.DomainModel.POCO.Base
 {
@@ -154,13 +157,11 @@ namespace Model.DomainModel.POCO.Base
             }
         }
 
-        public List<Person> Check(int id)
-        {
-            throw new NotImplementedException();
-        }
+
+
         #endregion
-        #region [-Findname-]
-        public string Findname(int id)
+        #region [-Find-]
+        public void Find(int id)
         {
             using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
@@ -168,8 +169,32 @@ namespace Model.DomainModel.POCO.Base
                 {
                     var Ref_Person = new Person();
                     Ref_Person = Context.Person.Find(id);
-                    return Ref_Person.FirstName;
+                   
+                    MemoryStream ms = new MemoryStream();
 
+
+                    FileStream fs = new FileStream("ser1.txt", FileMode.Create, FileAccess.Write);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(ms, Ref_Person);
+
+                    ms.Seek(0, SeekOrigin.Begin);
+
+                    
+
+                    int b = ms.ReadByte();
+                    while (b != -1)
+                    {
+                        fs.WriteByte((byte)b);
+                        b = ms.ReadByte();
+                    }
+
+                    
+                    //fs.Close();
+                    //ms.Close();
+
+
+
+                    //Context.SaveChanges();
                 }
                 catch (Exception)
                 {
@@ -184,119 +209,6 @@ namespace Model.DomainModel.POCO.Base
                     }
                 }
 
-            }
-        }
-        #endregion
-        #region [-Findsurame-]
-        public string Findsurame(int id)
-        {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
-            {
-                try
-                {
-                    var Ref_Person = new Person();
-                    Ref_Person = Context.Person.Find(id);
-                    return Ref_Person.Surname;
-
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (Context != null)
-                    {
-                        Context.Dispose();
-
-                    }
-                }
-
-            }
-        }
-        #endregion
-        #region [-Findusername-]
-        public string Findusername(int id)
-        {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
-            {
-                try
-                {
-                    var Ref_Person = new Person();
-                    Ref_Person = Context.Person.Find(id);
-                    return Convert.ToString(Ref_Person.UserName);
-
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (Context != null)
-                    {
-                        Context.Dispose();
-
-                    }
-                }
-
-            }
-        }
-        #endregion
-        #region [-Findpassword-]
-        public string Findpassword(int id)
-        {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
-            {
-                try
-                {
-                    var Ref_Person = new Person();
-                    Ref_Person = Context.Person.Find(id);
-                    return Convert.ToString(Ref_Person.Password);
-
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (Context != null)
-                    {
-                        Context.Dispose();
-
-                    }
-                }
-
-            }
-        }
-
-
-        #endregion
-        #region [-Findemail-]
-        public string Findemail(int id)
-        {
-            using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
-            {
-                try
-                {
-                    var Ref_Person = new Person();
-                    Ref_Person = Context.Person.Find(id);
-                    return Ref_Person.Email;
-
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                finally
-                {
-                    if (Context != null)
-                    {
-                        Context.Dispose();
-
-                    }
-                }
 
             }
         } 

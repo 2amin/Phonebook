@@ -60,11 +60,7 @@ namespace Veiw
             #endregion
             Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
             Ref_Edit = new Edit();
-            Ref_Edit.txtname.Text= Ref_PersonVeiwModel.Discovername(Convert.ToInt32(toolStripLabel2.Text));
-            Ref_Edit.txtsurname.Text = Ref_PersonVeiwModel.Discoversurname(Convert.ToInt32(toolStripLabel2.Text));
-            Ref_Edit.txtusername.Text = Ref_PersonVeiwModel.Discoverusername(Convert.ToInt32(toolStripLabel2.Text));
-            Ref_Edit.txtpassword.Text = Ref_PersonVeiwModel.Discoverpassword(Convert.ToInt32(toolStripLabel2.Text));
-            Ref_Edit.txtemail.Text = Ref_PersonVeiwModel.Discoveremail(Convert.ToInt32(toolStripLabel2.Text));
+            Ref_PersonVeiwModel.Serialize(Convert.ToInt32(toolStripLabel2.Text));
             Ref_Edit.MdiParent = this;
             Ref_Edit.Show();
 
