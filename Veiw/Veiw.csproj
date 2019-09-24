@@ -156,10 +156,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{02602d36-dd2a-4297-b69c-21f8068c1086}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\VeiwModel\VeiwModel.csproj">
       <Project>{fb5dc092-a5f6-4dbb-adfc-c8af7d698ba9}</Project>
       <Name>VeiwModel</Name>
