@@ -60,7 +60,24 @@ namespace Veiw
             #endregion
             Ref_PersonVeiwModel = new VeiwModel.PersonVeiwModel();
             Ref_Edit = new Edit();
-            Ref_PersonVeiwModel.Serialize(Convert.ToInt32(toolStripLabel2.Text));
+            List<string> people = new List<string>();
+            people=Ref_PersonVeiwModel.EditButtonClick(Convert.ToInt32(toolStripLabel2.Text));
+            for(int i=0;i<=people.Capacity;i++)
+            {
+                switch(i)
+                {
+                    case 0: Ref_Edit.txtname.Text = people[0];
+                        break;
+                    case 1:Ref_Edit.txtsurname.Text = people[1];
+                        break;
+                    case 2:Ref_Edit.txtusername.Text = people[2];
+                        break;
+                    case 3:Ref_Edit.txtpassword.Text = people[3];
+                        break;
+                    case 4:Ref_Edit.txtemail.Text = people[4];
+                        break;
+                }
+            }
             Ref_Edit.MdiParent = this;
             Ref_Edit.Show();
 

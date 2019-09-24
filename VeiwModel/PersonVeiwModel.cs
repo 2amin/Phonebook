@@ -48,10 +48,11 @@ namespace VeiwModel
         }
         #endregion
         #region [-Serialize-]
-        public void Serialize(int id)
+        public List<string> EditButtonClick(int id)
         {
             Ref_PersonCrud = new Model.DomainModel.POCO.Base.PersonBase1();
-            Ref_PersonCrud.Find(id);
+            
+            return Ref_PersonCrud.Find(id);
         } 
         #endregion
     }

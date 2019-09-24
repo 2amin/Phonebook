@@ -161,7 +161,7 @@ namespace Model.DomainModel.POCO.Base
 
         #endregion
         #region [-Find-]
-        public void Find(int id)
+        public List<string> Find(int id)
         {
             using (var Context = new DomainModel.DTO.EF.OnlineShoppingEntities1())
             {
@@ -169,32 +169,13 @@ namespace Model.DomainModel.POCO.Base
                 {
                     var Ref_Person = new Person();
                     Ref_Person = Context.Person.Find(id);
-                   
-                    MemoryStream ms = new MemoryStream();
-
-
-                    FileStream fs = new FileStream("ser1.txt", FileMode.Create, FileAccess.Write);
-                    BinaryFormatter bf = new BinaryFormatter();
-                    bf.Serialize(ms, Ref_Person);
-
-                    ms.Seek(0, SeekOrigin.Begin);
-
-                    
-
-                    int b = ms.ReadByte();
-                    while (b != -1)
-                    {
-                        fs.WriteByte((byte)b);
-                        b = ms.ReadByte();
-                    }
-
-                    
-                    //fs.Close();
-                    //ms.Close();
-
-
-
-                    //Context.SaveChanges();
+                    List<string> person = new List<string>();
+                    person.Add(Ref_Person.FirstName);
+                    person.Add(Ref_Person.Surname);
+                    person.Add(Convert.ToString(Ref_Person.UserName));
+                    person.Add(Convert.ToString(Ref_Person.Password));
+                    person.Add(Ref_Person.Email);
+                    return person;
                 }
                 catch (Exception)
                 {

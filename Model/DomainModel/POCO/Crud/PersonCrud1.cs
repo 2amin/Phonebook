@@ -13,7 +13,7 @@ namespace Model.DomainModel.POCO.Crud
         List<DomainModel.DTO.EF.Person> Select();
         void Remove(int id);
         void edit(string name, string surname, int username, int password, string email, int id);
-        void Find(int id);
+        List<string> Find(int id);
       
     }   
 }

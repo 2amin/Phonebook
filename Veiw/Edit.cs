@@ -23,16 +23,7 @@ namespace Veiw
 
         } 
         #endregion
-        private void Deserialize()
-        {
-            using (FileStream fs = new FileStream("ser1.txt", FileMode.Open, FileAccess.Read))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                Model.DomainModel.DTO.EF.Person p = (Model.DomainModel.DTO.EF.Person)bf.Deserialize(fs);
-                txtname.Text = p.FirstName;
-              
-            }
-        }
+      
         #region [-txtname_Validating-]
         private void txtname_Validating(object sender, CancelEventArgs e)
         {
@@ -315,9 +306,6 @@ namespace Veiw
 
         #endregion
 
-        private void Edit_Load(object sender, EventArgs e)
-        {
-            Deserialize();
-        }
+     
     }
 }
